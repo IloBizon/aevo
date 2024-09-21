@@ -1,0 +1,49 @@
+@import "style";
+.contacts {
+    margin: 100px 0;
+    &__wrap {
+        display: flex;
+        gap: 40px;
+        margin-left: 10%;
+    }
+    &__map {
+        width: 600px;
+        height: 400px;
+    }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: $additional_color;
+        a {
+            color: $additional_color;
+        }
+    }
+
+    &__title {
+        font-family: $base__font;
+        font-size: 50px;
+        font-weight: 700;
+        color: $base_color;
+    }
+
+    &__text {
+        font-family: $base__font;
+        font-size: 30px;
+        font-weight: 300;
+    }
+
+    &__socials {
+        display: flex;
+        gap: 10px;
+        &-link {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $base_color;
+        }
+    }
+}

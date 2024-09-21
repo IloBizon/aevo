@@ -1,0 +1,67 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1460px;
+  margin: 0 auto;
+}
+
+.advantages {
+  margin: 50px 0;
+  margin-bottom: 100px;
+}
+.advantages__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+}
+.advantages__title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #18313C;
+  font-size: 52px;
+}
+.advantages__grid {
+  padding-left: 50px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 850px;
+  margin: 0 auto;
+  gap: 50px;
+}
+.advantages__card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.advantages__card-title {
+  font-family: "Montserrat";
+  font-weight: 700;
+  color: #18313C;
+  font-size: 23px;
+}
+.advantages__card-text {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: #595959;
+  font-size: 23px;
+}
+.advantages__card-img {
+  height: 66px;
+  display: block;
+}
+.advantages__card-img img {
+  height: 100%;
+}

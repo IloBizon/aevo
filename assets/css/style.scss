@@ -1,0 +1,22 @@
+$base_color: #18313C;
+$additional_color: #595959;
+$base__font: "Montserrat";
+
+@font-face {
+    font-family: "Montserrat";
+    src: url("../fonts/Montserrat.ttf");
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.container {
+    max-width: 1460px;
+    margin: 0 auto;
+}
