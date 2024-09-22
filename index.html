@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/form.css">
     <link rel="stylesheet" href="assets/css/contacts.css">
     <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="icon" type="image/x-icon" href="./favicon.ico">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aevo</title>
@@ -19,9 +20,9 @@
     <header class="header">
         <div class="container">
             <div class="header__wrap">
-                <div class="header__logo">
+                <a href="/" class="header__logo">
                     <img src="assets/img/icons/logos/logo-dark.svg" alt="logo">
-                </div>
+                </a>
                 <nav class="header__nav">
                     <ul class="header__links">
                         <li class="header__link">
@@ -45,7 +46,7 @@
                 <div class="main__block">
                     <h1 class="main__title">Удобство для всех</h1>
                     <p class="main__text">Работайте быстрей, эффективней с продуктами от Aevo</p>
-                    <a href="#" class="main__btn">Продукты</a>
+                    <a href="#products" class="main__btn">Продукты</a>
                 </div>
             </div>
         </div>
@@ -141,9 +142,12 @@
                     <h3 class="call__title">Хотите сделать работу удобнее?</h3>
                     <p class="call__text">Оформите заявку на обратный звонок и получите бесплатную консультацию от наших специалистов</p>
                 </div>
-                <form onsubmit="alert('Данные успешно отправлены!');return false" class="form">
-                    <input type="text" class="form__input" placeholder="Телефон" maxlength="12">
-                    <button class="form__btn" type="submit">Отправить</button>
+                <form id="call_form" class="form">
+                    <div class="form__input-wrap">
+                        <input type="text" id="call_input" class="form__input" placeholder="Телефон" maxlength="11" required>
+                        <button class="form__btn" type="submit">Отправить</button>
+                    </div>
+                    <p class="form__status"></p>
                 </form>
             </div>
         </div>
@@ -158,16 +162,20 @@
                     <a href="mailto:contact@aevo.ru" class="contacts__text">contact@aevo.ru</a>
                     <p class="contacts__text">р. Татарстан, г. Елабуга, ул Ш-2 15</p>
                     <div class="contacts__socials">
-                        <a href="#" class="contacts__socials-link">
+                        <a href="https://youtube.com" class="contacts__socials-link">
                             <img src="assets/img/icons/yt.svg" alt="youtube">
                         </a>
-                        <a href="#" class="contacts__socials-link">
+                        <a href="https://t.me" class="contacts__socials-link">
                             <img src="assets/img/icons/tg.svg" alt="telegram">
                         </a>
                     </div>
-                    <form onsubmit="alert('Данные успешно отправлены!');return false" class="form">
-                        <input type="email" class="form__input form__input_black" placeholder="Email" maxlength="20">
-                        <button class="form__btn form__btn_white" type="submit">Отправить</button>
+                    <p class="form__title">Подпишитесь на уведомления о скидках </p>
+                    <form id="subscribe_form" class="form">
+                        <div class="form__input-wrap">
+                            <input name="email" id="email" type="email" class="form__input form__input_dark" placeholder="Email" maxlength="20">
+                            <button class="form__btn form__btn_light" type="submit">Отправить</button>
+                        </div>
+                        <p class="form__status form__status_dark"></p>
                     </form>
                 </div>
             </div>
@@ -187,15 +195,16 @@
                     </div>
                 </div>
                 <div class="footer__socials">
-                    <a href="#" class="footer__socials-link">
+                    <a href="https://youtube.com" class="footer__socials-link">
                         <img src="assets/img/icons/yt.svg" alt="youtube">
                     </a>
-                    <a href="#" class="footer__socials-link">
+                    <a href="https://t.me" class="footer__socials-link">
                         <img src="assets/img/icons/tg.svg" alt="telegram">
                     </a>
                 </div>
             </div>
         </div>
     </footer>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

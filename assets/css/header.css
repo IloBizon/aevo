@@ -37,3 +37,6 @@ a {
 .header__link a {
   color: #595959;
 }
+.header__link a:hover {
+  color: #18313C;
+}

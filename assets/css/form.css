@@ -18,8 +18,10 @@ a {
 
 .form {
   display: flex;
-  position: relative;
   display: inline-block;
+}
+.form__input-wrap {
+  position: relative;
 }
 .form__input {
   width: 100%;
@@ -35,17 +37,36 @@ a {
 .form__input::placeholder {
   color: #595959;
 }
-.form__input_black {
+.form__input_dark {
   background-color: #18313C;
   color: white;
 }
-.form__input_black::-moz-placeholder {
+.form__input_dark::-moz-placeholder {
   opacity: 1;
   color: white;
 }
-.form__input_black::placeholder {
+.form__input_dark::placeholder {
   opacity: 1;
   color: white;
+}
+.form__title {
+  font-family: "Montserrat";
+  color: #595959;
+  font-size: 20px;
+  font-weight: 500;
+}
+.form__status {
+  margin-top: 10px;
+  width: 100%;
+  font-family: "Montserrat";
+  font-size: 19px;
+  color: white;
+}
+.form__status_dark {
+  color: #18313C;
+}
+.form__status_error {
+  color: red;
 }
 .form__btn {
   position: absolute;
@@ -64,7 +85,7 @@ a {
 .form__btn:hover {
   cursor: pointer;
 }
-.form__btn_white {
+.form__btn_light {
   background-color: white;
   color: black;
 }

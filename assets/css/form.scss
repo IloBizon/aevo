@@ -1,8 +1,12 @@
 @import "style";
 .form {
     display: flex;
-    position: relative;
     display: inline-block;
+
+    &__input-wrap {
+        position: relative;
+    }
+
     &__input {
         width: 100%;
         border: 0;
@@ -13,13 +17,33 @@
         &::placeholder {
             color: $additional_color;
         }
-        &_black {
+        &_dark {
             background-color: $base_color;
             color: white;
             &::placeholder {
                 opacity: 1;
                 color: white;
             }
+        }
+    }
+    &__title {
+        font-family: $base__font;
+        color: $additional_color;
+        font-size: 20px;
+        font-weight: 500;
+    }
+
+    &__status {
+        margin-top: 10px;
+        width: 100%;
+        font-family: $base__font;
+        font-size: 19px;
+        color: white;
+        &_dark {
+            color: $base_color;
+        }
+        &_error {
+            color: red;
         }
     }
     
@@ -41,7 +65,7 @@
         &:hover {
             cursor: pointer;
         }
-        &_white {
+        &_light {
             background-color: white;
             color: black;
         }

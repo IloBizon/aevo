@@ -21,6 +21,11 @@
         font-size: 25px;
         a {
             color: $additional_color;
+            &:hover {
+                color: $base_color;
+            }
         }
+
+        
     }
 }
