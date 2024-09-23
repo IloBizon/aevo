@@ -1,0 +1,210 @@
+@import "../style";
+.main {
+    background-color: $base_color;
+    position: relative;
+    &__wrap {
+        padding: 120px 0;
+        display: flex;
+    }
+    &__block {
+        margin-left: 200px;
+    }
+
+    &__title {
+        font-family: $base__font;
+        color: white;
+        font-size: 77px;
+    }
+    &__text {
+        font-family: $base__font;
+        color: white;
+        font-size: 27px;
+        max-width: 440px;
+    }
+
+    &__img {
+        height: 80%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &_top {
+            height: 100%;
+            top: 0;
+            transform: translateY(0);
+        }
+    }
+}
+
+.products {
+    padding: 70px 0;
+    &__row {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-around;
+        gap: 30px;
+    }
+    &__card {
+        background-color: #F0F0F0;
+        padding: 45px 35px;
+        padding-bottom: 20px;
+        border-radius: 20px;
+        width: 300px;
+
+        &:hover {
+            cursor: pointer;
+            .products__card-img {
+                transform: scale(1.05);
+            }
+            .products__card-btn {
+                text-decoration: underline;
+            }
+        }
+
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            font-family: $base__font;
+            user-select: none;
+        }
+        &-series {
+            font-weight: 300;
+            font-size: 20px;
+        }
+        &-title {
+            font-weight: 500;
+            color: $base_color;
+            font-size: 30px;
+        }
+        &-img {
+            width: 100%;
+            height: 250px;
+            margin-bottom: 40px;
+            transition: all .3s ease;
+            &_kb {
+                height: 100px;
+                margin: 75px auto;
+                max-width: 70px;
+                margin-bottom: 115px;
+            }
+            &_combo {
+                max-width: 270px;
+                max-height: 120px;
+                margin: 35px auto;
+                &_sm {
+                    max-height: 90px;
+                    width: 300px;
+                    margin: 50px auto;
+                    img {
+                        width: 100%;
+                    }
+                }
+                img {
+                    width: 100%;
+                }
+            }
+            img {
+                height: 100%;
+                
+                max-height: 250px;
+                margin-left: 45%;
+                transform: translateX(-50%);
+            }
+        }
+        &-interactive {
+            margin-top: 40px;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            font-family: $base__font;
+        }
+        &-price {
+            color: $base_color;
+            font-weight: 400;
+            font-size: 23px;
+        }
+        &-btn {
+            border: 0;
+            background-color: transparent;
+            font-size: 20px;
+            color: $base_color;
+        }
+    }
+    
+}
+.popup {
+    z-index: 2;
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba($color: #000000, $alpha: 0.5);
+    display: none;
+    align-items: center;
+    justify-content: center;
+
+    &__bg {
+        position: absolute;
+        z-index: -1;
+        height: 100%;
+        width: 100%;
+    }
+
+    &_show {
+        display: flex;
+    }
+
+    &__wrap {
+        background-color: $base_color;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-family: $base__font;
+        padding: 50px;
+        width: 600px;
+        border-radius: 20px;
+        gap: 50px;
+    }
+    &__title {
+        font-weight: 700;
+        color: white;
+        font-size: 37px;
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 10px;
+        align-items: flex-start;
+        width: 100%;
+
+        &_hidden {
+            display: none;
+        }
+
+        &-label {
+            color: white;
+            font-size: 20px;
+        }
+        &-input {
+            padding: 15px;
+            width: 95%;
+            border: 0;
+            border-radius: 10px;
+        }
+        &-btn {
+            align-self: center;
+            margin-top: 30px;
+            padding: 20px 30px;
+            border-radius: 40px;
+            border: 0;
+            font-size: 20px;
+            font-weight: 500;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/mice/main-section.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комбо</title>
+</head>
+<body>
+    <div class="popup">
+        <div class="popup__bg" onclick="hidePopup()"></div>
+        <div class="popup__wrap">
+            <h2 class="popup__title">Оформление заказа</h2>
+            <form action="" class="popup__form">
+                <label for="name" class="popup__form-label">ФИО</label>
+                <input id="name" type="text" class="popup__form-input" placeholder="Иванов Иван Иванович">
+                <label for="phone" class="popup__form-label">Телефон</label>
+                <input id="phone" type="text" class="popup__form-input" placeholder="+7(999)999-99-99">
+                <label for="address" class="popup__form-label">Адрес</label>
+                <input id="address" type="text" class="popup__form-input">
+                <button onclick="sendForm(event)" class="popup__form-btn" type="submit">Оформить</button>
+            </form>
+        </div>
+    </div>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrap">
+                <a href="/" class="header__logo">
+                    <img src="assets/img/icons/logos/logo-dark.svg" alt="logo">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__links">
+                        <li class="header__link">
+                            <a href="/#about">О нас</a>
+                        </li>
+                        <li class="header__link">
+                            <a href="/#products">Продукты</a>
+                        </li>
+                        <li class="header__link">
+                            <a href="/#contacts">Контакты</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <div class="main__wrap">
+                <div class="main__block">
+                    <h1 class="main__title">Комбо</h1>
+                    <p class="main__text">ассортимент наших товаров позволяет вам найти комбо для любой задачи.</p>
+                </div>
+                <img src="assets/img/combo/bg.png" alt="combo" class="main__img">
+            </div>
+        </div>
+    </section>
+    <section class="products">
+        <div class="container">
+            <div class="products__row">
+                <div class="products__card" onclick="showPopup()">
+                    <div class="products__card-img products__card-img_combo">
+                        <img src="assets/img/combo/product1.png" alt="combo">
+                    </div>
+                    <div class="products__card-block">
+                        <p class="products__card-series">Work Series</p>
+                        <h4 class="products__card-title">Aevo С1</h4>
+                        <p class="products__card-text">Идеальная комбинация для работы</p>
+                    </div>
+                    <div class="products__card-interactive">
+                        <p class="products__card-price">₽3000</p>
+                        <p class="products__card-btn">Купить</p>
+                    </div>
+                </div>
+
+                <div class="products__card" onclick="showPopup()">
+                    <div class="products__card-img products__card-img_combo_sm">
+                        <img src="assets/img/combo/product2.png" alt="combo">
+                    </div>
+                    <div class="products__card-block">
+                        <p class="products__card-series">Work Series</p>
+                        <h4 class="products__card-title">Aevo С2 MX</h4>
+                        <p class="products__card-text">Комбо с механической клавиатурой</p>
+                    </div>
+                    <div class="products__card-interactive">
+                        <p class="products__card-price">₽3500</p>
+                        <p class="products__card-btn">Купить</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <a href="/" class="footer__logo">
+                    <img src="assets/img/icons/logos/logo-light.svg" alt="logo">
+                </a>
+                <div class="footer__nav">
+                    <div class="footer__links">
+                        <a href="/" class="footer__link">Главная</a>
+                        <a href="/#products" class="footer__link">Продукты</a>
+                        <a href="/#contacts" class="footer__link">Контакты</a>
+                    </div>
+                </div>
+                <div class="footer__socials">
+                    <a href="https://youtube.com" class="footer__socials-link">
+                        <img src="assets/img/icons/yt.svg" alt="youtube">
+                    </a>
+                    <a href="https://t.me" class="footer__socials-link">
+                        <img src="assets/img/icons/tg.svg" alt="telegram">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/js/popup.js"></script>
+</body>
+</html>
