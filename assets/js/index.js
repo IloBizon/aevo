@@ -54,6 +54,21 @@ function callFormHandler (event) {
         {
             callStatus.classList.remove("form__status_error")
         }
+        fetch("http://127.0.0.1:5000/forms", {
+            method: "POST",
+            body: JSON.stringify({
+                "id": "callForm",
+                "fields": [{
+                    "name": "Phone",
+                    "value": callInput.value
+                },]    
+            }),
+            headers: {
+                'Content-Type': 'application/json'
+              }
+        })
+
+
         callStatus.innerHTML = "Данные успешно отправлены!"
     }
     else {
@@ -64,5 +79,18 @@ function callFormHandler (event) {
 }
 
 function subscribeFormHandler(event) {
+    fetch("http://127.0.0.1:5000/forms", {
+        method: "POST",
+        body: JSON.stringify({
+            "id": "subscribeForm",
+            "fields": [{
+                "name": "Email",
+                "value": subscribeInput.value
+            },]    
+        }),
+        headers: {
+            'Content-Type': 'application/json'
+          }
+    })
     subscribeStatus.innerHTML = "Данные успешно отправлены!"
 }
